@@ -166,3 +166,24 @@ cars.iloc[[4, 1]]
 ```
 ```loc``` and ```iloc``` also allow you to select both rows and columns from a DataFrame. 
  
+```python
+# Import cars data
+import pandas as pd
+cars = pd.read_csv('cars.csv', index_col = 0)
+# Print out drives_right value of Morocco
+print(cars.loc['MOR','drives_right'])
+#print(cars.iloc[-2,-1])
+# Print sub-DataFrame
+cars.loc[['RU','MOR'],['country','drives_right']]
+#cars.iloc[[-2,-3],[-2,-1]]
+```
+
+It's also possible to select only columns with loc and iloc. In both cases, you simply put a slice going from beginning to end in front of the comma:
+
+```
+cars.loc[:, 'country']
+cars.iloc[:, 1]
+
+cars.loc[:, ['country','drives_right']]
+cars.iloc[:, [1, 2]]
+```
