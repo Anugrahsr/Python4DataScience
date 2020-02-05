@@ -54,3 +54,20 @@ output:
 
 ``` 'oslo' ```
 
+! Keys are immutable objects : contants of immutable object can not be changed once created
+<br>
+## Dictionary manipulation
+---
+ **Add a new key-value pair**
+ 
+ ``` python
+ #Add a key-value pair in dictionary my_dict
+ my_dict['key'] = 'value'
+ ```
+ **Check if a key is present in dictionary**
+ ``` python
+ print('key' in my_dict)
+ #Output will be True or False
+ ```
+ 
+ 
