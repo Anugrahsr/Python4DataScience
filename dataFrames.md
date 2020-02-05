@@ -81,3 +81,88 @@ MOR            70        Morocco          True
 EG             45          Egypt          True
 ```
 Now its easy to identify the rows right?
+
+---
+
+ data is typically available as files with a regular structure. One of those file types is the CSV file, which is short for "comma-separated values".
+ 
+ To import CSV data into Python as a Pandas DataFrame you can use ```read_csv()```.
+ 
+ ```python
+ import pandas as pd
+ df = pd.read_csv('data.csv')
+ ```
+**row labeling**
+
+we can use ```index_col=0``` to fix this
+
+```python
+# Fix import by including index_col
+cars = pd.read_csv('cars.csv', index_col=0)
+```
+
+---
+
+Use single square brackets to print out ```Pandas Series```
+Use double square brackets to print out ```Pandas DataFrame```
+
+Example
+```python
+# Import cars data
+import pandas as pd
+cars = pd.read_csv('cars.csv', index_col = 0)
+
+# Print out country column as Pandas Series
+print(cars['country'])
+
+# Print out country column as Pandas DataFrame
+print(cars[['country']])
+
+# Print out DataFrame with country and drives_right columns
+print(cars[['country','drives_right']])
+```
+```cars[0:5]``` will give you first 5 observations
+
+examples
+```python
+# Import cars data
+import pandas as pd
+cars = pd.read_csv('cars.csv', index_col = 0)
+
+# Print out first 3 observations
+print(cars[0:3])
+
+# Print out fourth, fifth and sixth observation
+print(cars[3:6])
+```
+output:
+```
+     cars_per_cap        country  drives_right
+    US            809  United States          True
+    AUS           731      Australia         False
+    JPN           588          Japan         False
+    
+    
+         cars_per_cap  country  drives_right
+    IN             18    India         False
+    RU            200   Russia          True
+    MOR            70  Morocco          True
+
+```
+
+**loc and iloc**
+
+ loc and iloc you can do practically any data selection operation on DataFrames
+ 
+ ```python
+ cars.loc['RU']
+cars.iloc[4]
+
+cars.loc[['RU']]
+cars.iloc[[4]]
+
+cars.loc[['RU', 'AUS']]
+cars.iloc[[4, 1]]
+```
+```loc``` and ```iloc``` also allow you to select both rows and columns from a DataFrame. 
+ 
