@@ -69,5 +69,40 @@ output:
  print('key' in my_dict)
  #Output will be True or False
  ```
+ **Update a existing key-value**
  
+ ``` python
+ my_dict['key'] = 'value2'
+ #the value of key changed from value to value2
+ ```
+ 
+ **Remove a key value pair**
+ 
+ ```python
+ del(my_dict['key'])
+ #removed key from the my_dict
+ ```
+ ---
+ ***Example***
+ 
+ ```python
+ # Definition of dictionary
+europe = {'spain':'madrid', 'france':'paris', 'germany':'bonn',
+          'norway':'oslo', 'italy':'rome', 'poland':'warsaw',
+          'australia':'vienna' }
+
+# Update capital of germany
+europe['germany'] = 'berlin'
+
+# Remove australia
+
+del(europe['australia'])
+# Print europe
+print(europe)
+```
+output:
+
+```python
+ {'germany': 'berlin', 'italy': 'rome', 'france': 'paris', 'norway': 'oslo', 'spain': 'madrid', 'poland': 'warsaw'}
+```
  
