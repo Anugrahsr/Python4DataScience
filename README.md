@@ -1,2 +1,2 @@
-# datacamp-Python4DataScience
+# Python4DataScience
 Learning DS
