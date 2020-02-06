@@ -154,3 +154,38 @@ medium = cars[between]
 # Print medium
 print(medium)
 ```
+**while loop**
+
+```
+while condition :
+    expression
+```
+
+example
+
+```python
+x = 1
+while x < 4 :
+    print(x)
+    x = x + 1
+```
+
+example
+if else in a while loop
+
+```python
+# Initialize offset
+offset = -6
+
+# Code the while loop
+while offset != 0 :
+    print("correcting...")
+    if offset > 0 :
+        offset = offset -1
+    else : 
+        offset = offset +1
+    print(offset)
+  ```
+  
+  
+    
