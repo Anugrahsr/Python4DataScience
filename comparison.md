@@ -69,3 +69,6 @@ print(np.logical_or(my_house > 18.5,my_house <10))
 # Both my_house and your_house smaller than 11
 print(np.logical_and(my_house < 11, your_house < 11))
 ```
+**if elif else**
+
+![image](https://hcc-cs.weebly.com/uploads/2/4/5/3/24535251/1390049468.jpg)
