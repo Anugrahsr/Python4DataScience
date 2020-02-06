@@ -227,3 +227,82 @@ house = [["hallway", 11.25],
 for x in house:
     print("the " + x[0] + " is " + str(x[1]) + " sqm")
 ```
+# Loop over dictionary
+
+In Python 3, you need the ```items()``` method to loop over a dictionary:
+```python
+world = { "afghanistan":30.55, 
+          "albania":2.77,
+          "algeria":39.21 }
+
+for key, value in world.items() :
+    print(key + " -- " + str(value))
+```
+
+# Loop over Numpy array
+
+```python
+#1D array
+for x in my_array :
+    ...
+```
+
+```python
+#2D array
+for x in np.nditer(my_array) :
+    ...
+```
+
+for multi-dimensional array we need to use ```np.nditer```
+
+example:
+
+```python
+# Import numpy as np
+import numpy as np
+
+# For loop over np_height
+for x in np.nditer(np_height):
+    print(str(x) + " inches")
+
+# For loop over np_baseball
+for k in np.nditer(np_baseball):
+    print(k)
+```
+
+# Loop over DataFrame
+
+Iterating over a Pandas DataFrame is typically done with the ```iterrows()``` method
+
+```python
+for lab, row in brics.iterrows() :
+    print(row['country'])
+```
+
+example
+
+```python
+# Import cars data
+import pandas as pd
+cars = pd.read_csv('cars.csv', index_col = 0)
+
+# Adapt for loop
+for lab, row in cars.iterrows() :
+    print(lab + ": " + str(row["cars_per_cap"]))
+```
+new column
+
+```python
+for lab, row in brics.iterrows() :
+    brics.loc[lab, "name_length"] = len(row["country"])
+```
+Apply method as replacement
+
+```python
+for lab, row in brics.iterrows() :
+    brics.loc[lab, "name_length"] = len(row["country"])
+```
+
+```python
+brics["name_length"] = brics["country"].apply(len)
+```
