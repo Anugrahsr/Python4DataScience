@@ -187,5 +187,29 @@ while offset != 0 :
     print(offset)
   ```
   
-  
-    
+**For Loops**
+
+```python
+for var in seq:
+    expression
+```
+
+example
+
+```python
+fam = [1.73, 1.68, 1.71, 1.89]
+for height in fam : 
+    print(height)
+```
+
+Using a ```for``` loop to iterate over a list only gives you access to every list element in each run, one after the other. If you also want to access the index information, so where the list element you're iterating over is located, you can use ```enumerate()```
+ 
+ example
+ 
+ ```python
+ fam = [1.73, 1.68, 1.71, 1.89]
+for index, height in enumerate(fam) :
+    print("person " + str(index) + ": " + str(height))
+```
+
+
