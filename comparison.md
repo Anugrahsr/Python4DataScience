@@ -72,3 +72,25 @@ print(np.logical_and(my_house < 11, your_house < 11))
 **if elif else**
 
 ![image](https://hcc-cs.weebly.com/uploads/2/4/5/3/24535251/1390049468.jpg)
+
+---
+
+example
+
+```python
+# Define variables
+room = "kit"
+area = 14.0
+
+# if-else construct for room
+if room == "kit" :
+    print("looking around in the kitchen.")
+else :
+    print("looking around elsewhere.")
+
+# if-else construct for area
+if area > 15 :
+    print("big place!")
+else :
+    print("pretty small")
+```
