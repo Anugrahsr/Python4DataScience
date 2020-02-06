@@ -212,4 +212,18 @@ for index, height in enumerate(fam) :
     print("person " + str(index) + ": " + str(height))
 ```
 
+example
+we can use ```x[0]``` and ```x[1]``` to navigate the array
 
+```python
+# house list of lists
+house = [["hallway", 11.25], 
+         ["kitchen", 18.0], 
+         ["living room", 20.0], 
+         ["bedroom", 10.75], 
+         ["bathroom", 9.50]]
+         
+# Build a for loop from scratch
+for x in house:
+    print("the " + x[0] + " is " + str(x[1]) + " sqm")
+```
